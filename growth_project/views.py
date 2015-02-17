@@ -10,8 +10,7 @@ from growth_project.apps.users.models import User as User1
 def login(request):
     c = {}
     c.update(csrf(request))
-    return render_to_response('growth_mvp_clone1.html', c)
-    #return render_to_response('growthmvp_clone1.html', c)
+    return render_to_response('landing_mvp.html', c)
 
 
 def auth_view(request):

@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from growth_project.apps.growth import views as viewsGrowth
 
 admin.autodiscover()
 
@@ -14,6 +15,9 @@ urlpatterns = patterns('',
                        url(r'^accounts/loggedin/$', 'growth_project.views.loggedin'),
                        url(r'^accounts/invalid_login/$', 'growth_project.views.invalid_login'),
                        url(r'^accounts/new/$', 'growth_project.views.new'),
+
+                       url(r'^dashboard/$', viewsGrowth.dashboard),
+
 
                        # Python social auth urls
                        url(r'', include('social.apps.django_app.urls', namespace="social")),
