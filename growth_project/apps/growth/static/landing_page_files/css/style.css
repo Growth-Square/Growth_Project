@@ -6,6 +6,40 @@
  * Made By MaterializeCSS.com
  */
 
+.fade{
+    opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+      opacity: 0.5;
+      }
+
+
+.feature_left{
+    max-width: 400px;
+    float: left;
+
+}
+
+.feature_left h2{
+    font-size: 42px;
+    line-height: 63px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    max-width: 480px;
+}
+
+.feature_left p{
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 480px;
+}
+
+
+
 .icon1{
     color:#ffea00;
 }
@@ -18,6 +52,11 @@
     color:#d84315;
 }
 
+.image_feature{
+
+}
+
+
 nav ul a,
 nav .brand-logo {
   /*color: #444; */
@@ -29,12 +68,6 @@ p {
 
 .button-collapse {
   color: #26a69a;
-}
-
-
-.parallax{
-    width: 100%;
-
 }
 
 .parallax-container {
