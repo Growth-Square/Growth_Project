@@ -12,3 +12,6 @@ import mysql.connector
 def index(request):
     return render_to_response('landing_mvp.html', RequestContext(request) )
     #return render_to_response('growthmvp_clone1.html', RequestContext(request) )
+
+def dashboard(request):
+    return render_to_response('dashboard.html')
