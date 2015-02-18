@@ -26,7 +26,7 @@
       <file leaf-file-name="dashboard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/growth_project/apps/growth/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="989" selection-end="989" vertical-scroll-proportion="0.3603083" vertical-offset="204" max-vertical-offset="3808">
+            <state line="27" column="29" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.4913295" vertical-offset="204" max-vertical-offset="3808">
               <folding />
             </state>
           </provider>
@@ -740,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/growth_project/apps/growth/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="989" selection-end="989" vertical-scroll-proportion="0.3603083" vertical-offset="204" max-vertical-offset="3808">
+        <state line="27" column="29" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.4913295" vertical-offset="204" max-vertical-offset="3808">
           <folding />
         </state>
       </provider>
