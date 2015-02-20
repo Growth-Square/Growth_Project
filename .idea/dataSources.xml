@@ -3,7 +3,7 @@
   <component name="DataSourceManagerImpl" format="xml" hash="515898198">
     <data-source source="LOCAL" name="Django default" uuid="33f316d6-ae65-4a21-9945-e6bbf12b5dae">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/growth</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/growthdb</jdbc-url>
       <user-name>root</user-name>
       <libraries>
         <library>

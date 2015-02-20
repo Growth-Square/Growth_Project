@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from growth_project.apps.growth import views as viewsGrowth
+from growth_project.apps.main import views as viewsGrowth
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'', include('growth_project.apps.growth.urls', namespace="growth")),
+                       url(r'', include('growth_project.apps.main.urls', namespace="main")),
                        url(r'', include('growth_project.apps.users.urls', namespace="users")),
 
                        # User auth urls
@@ -17,6 +17,17 @@ urlpatterns = patterns('',
                        url(r'^accounts/new/$', 'growth_project.views.new'),
 
                        url(r'^dashboard/$', viewsGrowth.dashboard),
+                       url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
+
+                       # Reset password urls
+                       url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
+                           name='reset_password_reset1'),
+                       url(r'^reset/password_reset/done/$', 'django.contrib.auth.views.password_reset_done',
+                           name='password_reset_done'),
+                       url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>.+)/$',
+                           'django.contrib.auth.views.password_reset_confirm', name='password_reset_confirm'),
+                       url(r'^reset/done/$', 'django.contrib.auth.views.password_reset_complete',
+                           name='password_reset_complete'),
 
 
                        # Python social auth urls

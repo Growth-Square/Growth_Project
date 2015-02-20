@@ -2,8 +2,6 @@ from django.shortcuts import render, render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from django.core.context_processors import csrf
-from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
 from growth_project.apps.users.models import User as User1
 
 
@@ -54,3 +52,5 @@ def new(request):
         return render_to_response('user_created.html', {'user': request.user})
     else:
         return render_to_response('/accounts/invalid_login')
+
+
