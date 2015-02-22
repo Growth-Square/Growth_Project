@@ -6,7 +6,7 @@ SECRET_KEY = 'w8*hk+yyt!)@tkl((^$c0g&#(7da8#%!6v7f-x@b^u)09hztv*'
 
 TEMPLATE_DIRS = (
     "C:/Django/env/growth_project/growth_project/templates",
-    #"C:/Django/env/growth_project/growth_project/apps/main/templates",
+    # "C:/Django/env/growth_project/growth_project/apps/main/templates",
 )
 
 TEMPLATE_LOADERS = (
@@ -22,7 +22,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
-    #My apps
+    # My apps
     'growth_project.apps.main',
     'growth_project.apps.users',
 )
@@ -66,7 +66,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     ('assets', 'C:/Django/env/growth_project/growth_project/static'),
-    #('assets', 'C:/Django/env/growth_project/growth_project/apps/main/static'),
+    # ('assets', 'C:/Django/env/growth_project/growth_project/apps/main/static'),
 )
 
 # Database -------------------------------------------------------------------------------
@@ -91,7 +91,7 @@ TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
     'C:/Django/env/growth_project/growth_project/templates',
-    #'C:/Django/env/growth_project/growth_project/apps/main/templates',
+    # 'C:/Django/env/growth_project/growth_project/apps/main/templates',
     'C:/Django/env/growth_project/growth_project/apps/users/templates',
 )
 
@@ -107,7 +107,7 @@ THIRD_PARTY_APPS = (
 )
 
 AUTH_USER_MODEL = 'users.User'
-#AUTH_USER_MODEL = 'main.User'
+# AUTH_USER_MODEL = 'main.User'
 
 AUTHENTICATION_BACKENDS = (
     'social.backends.facebook.Facebook2AppOAuth2',
@@ -137,7 +137,7 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 25 #587
+EMAIL_PORT = 25  # 587
 EMAIL_HOST_USER = 'gonzalo@growthsquare.com'
 EMAIL_HOST_PASSWORD = 'gborderolle12a'
 DEFAULT_FROM_EMAIL = 'gonzalo@growthsquare.com'

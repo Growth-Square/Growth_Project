@@ -24,7 +24,6 @@ def auth_view(request):
 
 
 def loggedin(request):
-#return render_to_response('dashboard.html', {'user': request.user})
     return render_to_response('loggedin.html', {'user': request.user})
 
 
