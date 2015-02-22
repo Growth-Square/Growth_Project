@@ -16,7 +16,7 @@ def index(request):
 
 
 def dashboard(request):
-    return render_to_response('dashboard.html')
+    return render_to_response('dashboard.html', {'user': request.user})
 
 
 def selector(request):
@@ -24,11 +24,13 @@ def selector(request):
     cursor = conn.cursor()
 
     try:
-        #        inventory_data = inventory.objets.get(hostname=hostname)
+        # inventory_data = inventory.objets.get(hostname=hostname)
         templates_data = templates.objects.all()
-        return render(request, 'selector_landing.html', {'templates': templates_data})
+        return render(request, 'selector_landing.html',
+                                  {'user': request.user, 'templates': templates_data})
     except templates.DoesNotExist:
-        return render(request, 'selector_landing.html', {'error_message': "No hay templates ingresados"})
+        return render(request, 'selector_landing.html',
+                                  {'user': request.user, 'error_message': "No hay templates ingresados"})
         # return HttpResponseRedirect('/accounts/invalid_login'
 
 

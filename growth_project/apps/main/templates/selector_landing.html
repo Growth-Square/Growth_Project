@@ -29,15 +29,16 @@
             <p><strong>{{ error_message }}</strong></p>
 
         {% else %}
-            <p>Hello</p>
-            B: {{ templates.count }}
+            {{ templates.count }}
             <div class="row">
                 <div class="col-lg-12">
 
                     {% for one_template in templates %}
                         <div class="col-md-6 portfolio-item">
                             <a href="#">
-                                <img class="img-responsive" src="one_template.previewImagePath" alt="">
+                                <img class="img-responsive"
+                                     src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}"
+                                     style="width: 300px">
                             </a>
 
                             <h3>
@@ -46,7 +47,6 @@
 
                             <p>{{ one_template.templateDescription }}</p>
                         </div>
-
                     {% endfor %}
 
                 </div>

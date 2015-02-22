@@ -24,6 +24,8 @@ def auth_view(request):
 
 
 def loggedin(request):
+    #response = HttpResponse(template.render(context))
+    #response.set_cookie('user_logged', request.user)
     return render_to_response('loggedin.html', {'user': request.user})
 
 
