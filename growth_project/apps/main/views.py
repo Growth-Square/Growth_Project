@@ -27,10 +27,10 @@ def selector(request):
         # inventory_data = inventory.objets.get(hostname=hostname)
         templates_data = templates.objects.all()
         return render(request, 'selector_landing.html',
-                                  {'user': request.user, 'templates': templates_data})
+                      {'user': request.user, 'templates': templates_data})
     except templates.DoesNotExist:
         return render(request, 'selector_landing.html',
-                                  {'user': request.user, 'error_message': "No hay templates ingresados"})
+                      {'user': request.user, 'error_message': "No hay templates ingresados"})
         # return HttpResponseRedirect('/accounts/invalid_login'
 
 
@@ -41,3 +41,7 @@ def selector(request):
 
     return render_to_response('selector_landing.html', t)
     """
+
+
+def designer(request):
+    return render_to_response('landing_designer_old.html', {'user': request.user})

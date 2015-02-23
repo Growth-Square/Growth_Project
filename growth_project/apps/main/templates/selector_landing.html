@@ -35,7 +35,7 @@
 
                     {% for one_template in templates %}
                         <div class="col-md-6 portfolio-item">
-                            <a href="#">
+                            <a href="{% url 'designer' %}">
                                 <img class="img-responsive"
                                      src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}"
                                      style="width: 300px">
