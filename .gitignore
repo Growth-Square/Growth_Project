@@ -49,4 +49,4 @@ growth_project/.idea/workspace.xml
 growth_project/apps/main/.idea/workspace.xml
 growth_project/apps/social_auth/.idea/workspace.xml
 growth_project/apps/users/.idea/workspace.xml
-.idea/workspace.xml
+git rm -f .idea/workspace.xml
