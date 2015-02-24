@@ -43,5 +43,6 @@ def selector(request):
     """
 
 
-def designer(request):
-    return render_to_response('landing_designer_old.html', {'user': request.user})
+def designer(request, name):
+    # tag = Tag.objects.get(name=unslug)
+    return render_to_response(name + '.html', {'user': request.user})

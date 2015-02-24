@@ -14,6 +14,7 @@ class TimeStampModel(models.Model):
 
 class Template(models.Model):
     templateName = models.CharField(max_length=100)
+    templateFileName = models.CharField(max_length=100)
     templateDescription = models.CharField(max_length=100)
     previewImagePath = models.CharField(max_length=200)
 

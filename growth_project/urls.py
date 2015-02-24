@@ -19,7 +19,8 @@ urlpatterns = patterns('',
                        # Main functions
                        url(r'^dashboard/$', viewsGrowth.dashboard),
                        url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
-                       url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
+                       #url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
+                       url(r'^dashboard/designer/(?P<name>.+)$', viewsGrowth.designer, name='designer'),
 
                        # Reset password urls
                        url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
