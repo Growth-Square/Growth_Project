@@ -5,11 +5,7 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
-.idea/workspace.xml
-growth_project/.idea/workspace.xml
-growth_project/apps/main/.idea/workspace.xml
-growth_project/apps/social_auth/.idea/workspace.xml
-growth_project/apps/users/.idea/workspace.xml
+
 
 
 # Recycle Bin used on file shares
@@ -49,4 +45,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .idea/workspace.xml
-.idea/workspace.xml
+growth_project/.idea/workspace.xml
+growth_project/apps/main/.idea/workspace.xml
+growth_project/apps/social_auth/.idea/workspace.xml
+growth_project/apps/users/.idea/workspace.xml
