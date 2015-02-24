@@ -1,17 +1,38 @@
+<!-- Old headeer
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Landing 1</title>
 
-	<!-- Nuevos -->
+	<!-- Nuevos
 	<link href='//fonts.googleapis.com/css?family=Lobster|Roboto:400,900,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css" />
-	<link rel="stylesheet" href="../assets/css/main-landings.css" />
-</head>
-<body>
+	<link rel="stylesheet" href="../assets/css/main-landings.css" /> -->
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css %}
+
+    <link href='//fonts.googleapis.com/css?family=Lobster|Roboto:400,900,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+	<link href="{% static 'theme_pages_files/css/main-landings.css' %}" rel="stylesheet">
+
+{% endblock css %}
+
+<!-- OLD
+<body> -->
+
+
+{% block content %}
 
     <header class="banner navbar navbar-default navbar-static-top" role="banner">
 		<div class="container">
@@ -145,12 +166,21 @@
         </div>
 </footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ {% block javascript %}
 
-	<script src="assets/js/scripts-landings-min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="{% static 'theme_pages_files/js/scripts-landings-min.js' %}"></script>
+
+ {% endblock javascript %}
+
+
+{% endblock %}
+
+<!--- old close
 </body>
 </html>
+-->
