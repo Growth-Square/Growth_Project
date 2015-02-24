@@ -1,7 +1,7 @@
 <!-- Old headeer
 
 
-<!DOCTYPE html>
+<!DOCTYPE html> 1
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -33,7 +33,7 @@
 
 
 {% block content %}
-
+9
     <header class="banner navbar navbar-default navbar-static-top" role="banner">
 		<div class="container">
 			<div class="navbar-header">
@@ -80,7 +80,9 @@
         <div class="col-xs-12" id="feature">
                  <div class="col-xs-12 col-sm-3 media-body">
                      <a href="#">
-                         <img class="media-object" src="../assets/img/beneficio1.png" alt="...">
+
+                         <img src="{% static 'theme_pages_files/img/beneficio1.png' %}" alt="" />
+                        <!-- <img class="media-object" src="../assets/img/beneficio1.png" alt="...">-->
                      </a>
                      <h3 class="media-heading">Beneficio 1</h3>
                      Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1
@@ -88,14 +90,14 @@
 
                  <div class="col-xs-12 col-sm-3 media-body media-body">
                      <a href="#">
-                         <img class="media-object" src="../assets/img/beneficio2.png" alt="...">
+                         <img class="media-object" src="{% static 'theme_pages_files/img/beneficio2.png' %} alt="...">
                      </a>
                      <h3 class="media-heading">Beneficio 2</h3>
                      Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1
                  </div>
                  <div class="class=col-xs-12 col-sm-3 media-body">
                      <a href="#">
-                         <img class="media-object" src="../assets/img/feature1.png" alt="...">
+                         <img class="media-object" src="{% static 'theme_pages_files/img/feature1.png' %} alt="...">
                      </a>
 
                     <h3 class="media-heading">Feature 1</h3>
@@ -105,7 +107,7 @@
 
                  <div class="col-xs-12 col-sm-3 media-body">
                      <a href="#">
-                         <img class="media-object" src="../assets/img/feature2.gif" alt="...">
+                         <img class="media-object"src="{% static 'theme_pages_files/img/feature2.gif' %} alt="...">
                      </a>
                      <h3 class="media-heading">Feature 2</h3>
                      Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1
@@ -115,7 +117,7 @@
         <div class="col-xs-12" id="testimonios">
                 <div class="col-sm-6 col-md-4 item">
                     <div class="thumbnail">
-                        <img src="../assets/customer-img-2.jpg" alt="..." style="border-radius:30px;">
+                        <img src="{% static 'theme_pages_files/img/customer-img-2.jpg' %} alt="..." style="border-radius:30px;">
                             <div class="caption text-left">
                                 <h3>Fulano</h3>
                                 <p>GrowthMVP me cambio la vida</p>
@@ -128,7 +130,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4 item">
                     <div class="thumbnail">
-                        <img src="../assets/customer-img-1.jpg" alt="..." style="border-radius:30px;">
+                        <img src="{% static 'theme_pages_files/img/customer-img-2.jpg' %} alt="..." style="border-radius:30px;">
                             <div class="caption text-left">
                                 <h3>Lego</h3>
                                 <p>Desde que uso los productos Growth mi vida cambio maravillosamente!</p>
