@@ -16,8 +16,10 @@ urlpatterns = patterns('',
                        url(r'^accounts/invalid_login/$', 'growth_project.views.invalid_login'),
                        url(r'^accounts/new/$', 'growth_project.views.new'),
 
+                       # Main functions
                        url(r'^dashboard/$', viewsGrowth.dashboard),
                        url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
+                       url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
 
                        # Reset password urls
                        url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
@@ -33,7 +35,7 @@ urlpatterns = patterns('',
                        # Python social auth urls
                        url(r'', include('social.apps.django_app.urls', namespace="social")),
                        url(r'', include('django.contrib.auth.urls', namespace="auth")),
-                       #url(r'', include('social_auth.urls')),
+                       # url(r'', include('social_auth.urls')),
 
                        # Admin urls
                        url(r'^admin/', include(admin.site.urls)),
