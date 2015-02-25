@@ -20,9 +20,6 @@ def dashboard(request):
 
 
 def selector(request):
-    conn = mysql.connector.connect(user='root', database='growthdb')
-    cursor = conn.cursor()
-
     try:
         # inventory_data = inventory.objets.get(hostname=hostname)
         templates_data = templates.objects.all()
@@ -35,6 +32,8 @@ def selector(request):
 
 
 """
+conn = mysql.connector.connect(user='root', database='growthdb')
+    cursor = conn.cursor()
     cursor.execute("SELECT * FROM main_template")
     rows = cursor.fetchall()
     t = Context({'results': rows})
@@ -43,6 +42,8 @@ def selector(request):
     """
 
 
-def designer(request, name):
+def designer(request, template_name):
     # tag = Tag.objects.get(name=unslug)
-    return render_to_response(name + '.html', {'user': request.user})
+    # return render_to_response('landing.html', args=(templateFileName,))
+    return render_to_response('theme_pages/' + template_name + '.html', {'user': request.user})
+

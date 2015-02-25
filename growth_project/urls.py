@@ -17,10 +17,12 @@ urlpatterns = patterns('',
                        url(r'^accounts/new/$', 'growth_project.views.new'),
 
                        # Main functions
-                       url(r'^dashboard/$', viewsGrowth.dashboard),
+                       url(r'^dashboard/$', viewsGrowth.dashboard, name='dashboard'),
                        url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
-                       #url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
-                       url(r'^dashboard/designer/(?P<name>.+)$', viewsGrowth.designer, name='designer'),
+                       # url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
+                       #url(r'^dashboard/designer/(\d{4})/$', viewsGrowth.designer, name='designer'),
+                       url(r'^designer/(?P<template_name>\w+)/$', viewsGrowth.designer, name='designer'),
+                       #(?P<name>\w+)/
 
                        # Reset password urls
                        url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
