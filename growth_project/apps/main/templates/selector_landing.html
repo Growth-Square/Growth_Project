@@ -9,90 +9,90 @@
 
     <link href="{% static 'selector_landing_files/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'selector_landing_files/css/2-col-portfolio.css' %}" rel="stylesheet">
-
-    <link href="{% static 'dashboard_files/css/sb-admin.css' %}" rel="stylesheet">
+    <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
 
 
 {% endblock css %}
 
 {% block content %}
 
-        <div id="page-wrapper">
+    <div id="page-wrapper">
 
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Elige la mejor Landing
-                    <small>de acuerdo a tus necesidades!</small>
-                </h1>
-            </div>
-        </div>
-
-        {% if error_message %}
-            <p><strong>{{ error_message }}</strong></p>
-
-        {% else %}
             <div class="row">
                 <div class="col-lg-12">
-
-                    {% for one_template in templates %}
-                        <div class="col-md-6 portfolio-item">
-                            <a href="{% url 'designer' one_template.templateFileName %} ">
-                                <img class="img-responsive"
-                                     src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}"
-                                     style="width: 300px">
-                            </a>
-
-                            <h3>
-                                <a href="#">{{ one_template.templateName }}</a>
-                            </h3>
-
-                            <p>{{ one_template.templateDescription }}</p>
-                        </div>
-                    {% endfor %}
-
+                    <h1 class="page-header">Elige la mejor Landing
+                        <small>de acuerdo a tus necesidades!</small>
+                    </h1>
                 </div>
             </div>
 
-        {% endif %}
+            {% if error_message %}
+                <p><strong>{{ error_message }}</strong></p>
 
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
+            {% else %}
+                <div class="row">
+                    <div class="col-lg-12">
 
-                <h3>
-                    <a href="#">Normal</a>
-                </h3>
+                        {% for one_template in templates %}
+                            <div class="col-md-6 portfolio-item">
+                                <a href="{% url 'designer' one_template.templateFileName %} ">
+                                    <img class="img-responsive"
+                                         src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}"
+                                         style="width: 300px">
+                                </a>
 
-                <p>Valida y haz conocer tu idea con un sencillo diseno realizado. Invierte en Adwords para realizar esta
-                    tarea de forma mas sencilla.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
+                                <h3>
+                                    <a href="#">{{ one_template.templateName }}</a>
+                                </h3>
 
-                <h3>
-                    <a href="#">From</a>
-                </h3>
+                                <p>{{ one_template.templateDescription }}</p>
+                            </div>
+                        {% endfor %}
 
-                <p>Se mas directo y muestra un form en tu inicio para obtener mas suscriptores.</p>
-            </div>
-        </div>
+                    </div>
+                </div>
 
-        <footer>
+            {% endif %}
+
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                <div class="col-md-6 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+
+                    <h3>
+                        <a href="#">Normal</a>
+                    </h3>
+
+                    <p>Valida y haz conocer tu idea con un sencillo diseno realizado. Invierte en Adwords para realizar
+                        esta
+                        tarea de forma mas sencilla.</p>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+
+                    <h3>
+                        <a href="#">From</a>
+                    </h3>
+
+                    <p>Se mas directo y muestra un form en tu inicio para obtener mas suscriptores.</p>
                 </div>
             </div>
-        </footer>
 
-    </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
 
     </div>
 
