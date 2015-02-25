@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_2.html" %}
 
 {% load static %}
 
@@ -10,9 +10,15 @@
     <link href="{% static 'selector_landing_files/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'selector_landing_files/css/2-col-portfolio.css' %}" rel="stylesheet">
 
+    <link href="{% static 'dashboard_files/css/sb-admin.css' %}" rel="stylesheet">
+
+
 {% endblock css %}
 
 {% block content %}
+
+        <div id="page-wrapper">
+
 
     <div class="container">
 
@@ -85,6 +91,8 @@
                 </div>
             </div>
         </footer>
+
+    </div>
 
     </div>
 

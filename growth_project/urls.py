@@ -8,6 +8,10 @@ urlpatterns = patterns('',
                        url(r'', include('growth_project.apps.main.urls', namespace="main")),
                        url(r'', include('growth_project.apps.users.urls', namespace="users")),
 
+                       # Social auth urls
+                       url(r'', include('social.apps.django_app.urls', namespace="social")),
+                       url(r'', include('django.contrib.auth.urls', namespace="auth")),
+
                        # User auth urls
                        url(r'^accounts/login/$', 'growth_project.views.login'),
                        url(r'^accounts/auth/$', 'growth_project.views.auth_view'),
@@ -20,9 +24,9 @@ urlpatterns = patterns('',
                        url(r'^dashboard/$', viewsGrowth.dashboard, name='dashboard'),
                        url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
                        # url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
-                       #url(r'^dashboard/designer/(\d{4})/$', viewsGrowth.designer, name='designer'),
+                       # url(r'^dashboard/designer/(\d{4})/$', viewsGrowth.designer, name='designer'),
                        url(r'^designer/(?P<template_name>\w+)/$', viewsGrowth.designer, name='designer'),
-                       #(?P<name>\w+)/
+                       # (?P<name>\w+)/
 
                        # Reset password urls
                        url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
@@ -34,11 +38,6 @@ urlpatterns = patterns('',
                        url(r'^reset/done/$', 'django.contrib.auth.views.password_reset_complete',
                            name='password_reset_complete'),
 
-
-                       # Python social auth urls
-                       url(r'', include('social.apps.django_app.urls', namespace="social")),
-                       url(r'', include('django.contrib.auth.urls', namespace="auth")),
-                       # url(r'', include('social_auth.urls')),
 
                        # Admin urls
                        url(r'^admin/', include(admin.site.urls)),
