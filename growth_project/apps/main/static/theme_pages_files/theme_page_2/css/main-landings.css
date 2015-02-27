@@ -48,6 +48,11 @@ a:hover {
 abbr[title] {
   border-bottom: 1px dotted; }
 
+
+.benefit_logo{
+    width: 115px;
+
+}
 b,
 strong {
   font-weight: bold; }
