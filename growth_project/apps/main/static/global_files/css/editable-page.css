@@ -1,0 +1,13 @@
+/*!
+ * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+label:hover {
+    background: #f2f5ff;
+    border-radius: 5px;
+    padding: 2px 4px;
+}

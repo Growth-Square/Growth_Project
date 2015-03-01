@@ -1,4 +1,4 @@
-{% extends "base_2.html" %}
+{% extends "base_3_template.html" %}
 
 {% load static %}
 
@@ -9,17 +9,10 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="{% static 'theme_pages_files/theme_page_1/css/main-landings.css' %}" rel="stylesheet">
-    <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
     <link href="{% static 'dashboard_files/font-awesome/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet"/>
-
-    <style>
-        label:hover {
-            background: #f2f5ff;
-            border-radius: 5px;
-            padding: 2px 4px;
-        }
-
-    </style>
+    <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
+    <link href="{% static 'global_files/css/editable-page.css' %}" rel="stylesheet">
+    <link href="{% static 'theme_pages_files/theme_page_5/css/style.css' %}" rel="stylesheet">
 
 {% endblock css %}
 
@@ -227,21 +220,6 @@
         </div>
     </div>
 
-    <footer class="content-info navbar-bottom" role="contentinfo">
-        <div class="container">
-            <div class="col-xs-6 langCountry">
-                <div class="lang">
-                    <a href="#esp">ESP</a> / <a href="#eng">ENG</a>
-                </div>
-            </div>
-            <div class="col-xs-6 copyright">
-                <div>
-                    Google Apps | Montevideo, Uruguay
-                </div>
-            </div>
-        </div>
-    </footer>
-
     {% block javascript %}
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -254,6 +232,7 @@
         <script src="{% static 'landing_designer_old_files/files/jquery.js' %}" type="text/javascript"></script>
         <script src="{% static 'landing_designer_old_files/files/jQuery.Plugins.js' %}" type="text/javascript"></script>
         <script src="{% static 'landing_designer_old_files/files/jquery-ui.js' %}" type="text/javascript"></script>
+
 
         <script type="text/javascript">
 
