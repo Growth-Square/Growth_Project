@@ -41,11 +41,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+git rm -f .idea/workspace.xml
 .idea/*
 .idea/workspace.xml
-growth_project/.idea/workspace.xml
-growth_project/apps/main/.idea/workspace.xml
-growth_project/apps/social_auth/.idea/workspace.xml
-growth_project/apps/users/.idea/workspace.xml
+apps/main/.idea/workspace.xml
 
 #  http://stackoverflow.com/questions/19973506/cannot-ignore-idea-workspace-xml-keeps-popping-up
