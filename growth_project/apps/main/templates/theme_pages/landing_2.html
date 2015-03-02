@@ -1,4 +1,4 @@
-{% extends "base_2.html" %}
+{% extends "base_3_template.html" %}
 
 {% load static %}
 
@@ -6,12 +6,15 @@
 
     <link href='//fonts.googleapis.com/css?family=Lobster|Roboto:400,900,700' rel='stylesheet' type='text/css'>
     <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="{% static 'theme_pages_files/theme_page_2/css/main-landings.css' %}" rel="stylesheet">
 
-    <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"/>
+
     <link href="{% static 'dashboard_files/font-awesome/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
+    <link href="{% static 'global_files/css/editable-page.css' %}" rel="stylesheet">
+    <link href="{% static 'theme_pages_files/theme_page_5/css/style.css' %}" rel="stylesheet">
 
 {% endblock css %}
 
@@ -53,13 +56,26 @@
         <div id="header-section">
             <div class="col-xs-12 logo">
                 <img src="{% static 'theme_pages_files/theme_page_2/img/iphone-icon.png' %}" class="img-responsive"
+                     style="width: 150px;"
                      alt="Responsive image">
             </div>
 
             <div class="col-xs-12 copy">
-                <h1 class="page-header">Más poderoso, más grande</h1>
+                <h1 class="page-header">
+                    <label class="">
+                        Más poderoso, más grande
+                    </label> <input class="clickedit" type="text"/>
 
-                <p class="lead sub-header">No es solamente más grande, es mejor en todos los sentidos, y dramáticamente más ligero. Más poderoso, pero también eficiente. Con una cubierta de smooth metal que le permite integrar su nueva pantalla Retina HD</p>
+                    <div class="clearfix"></div>
+                </h1>
+
+                <p class="lead sub-header"><label class="pull-left">No es solamente más grande, es mejor en todos los
+                    sentidos, y dramáticamente más ligero. Más poderoso, pero también eficiente. Con una cubierta de
+                    smooth metal que le permite integrar su nueva pantalla Retina HD
+                </label> <input class="clickedit" type="text"/>
+
+                <div class="clearfix"></div>
+                </p>
             </div>
         </div>
 
@@ -73,90 +89,111 @@
             </form>
         </div>
 
-
         <div class="col-xs-12" id="feature">
             <div class="col-xs-12 col-sm-4 media-body">
                 <a href="#">
-                    <img class="media-object benefit_logo" src="{% static 'theme_pages_files/theme_page_2/img/mobile_icon.jpeg' %}"
+                    <img class="media-object benefit_logo"
+                         src="{% static 'theme_pages_files/theme_page_2/img/mobile_icon.jpeg' %}"
                          alt="...">
                 </a>
 
-                <h3 class="media-heading">No es solo una pantalla más grande, es una mejor pantalla-</h3>
-                Es una de las cosas que hacen una mejor pantalla. No solamente lo hace más grande, su pantalla retina
-                ofrece un multi-touch con coloreas reales y un gran constraste.
+                <h3 class="media-heading"><label class="pull-left">No es sólo una pantalla más grande, es una mejor
+                    pantalla-
+                    Es una de las cosas que hacen una mejor pantalla. No solamente lo hace más grande, su pantalla
+                    retina
+                    ofrece un multi-touch con coloreas reales y un gran constraste.
+                </label> <input class="clickedit" type="text"/></h3>
+
+                <div class="clearfix"></div>
             </div>
 
             <div class="col-xs-12 col-sm-4 media-body media-body">
                 <a href="#">
-                    <img class="media-object benefit_logo" src="{% static 'theme_pages_files/theme_page_2/img/efficence_icon.png' %}"
+                    <img class="media-object benefit_logo"
+                         src="{% static 'theme_pages_files/theme_page_2/img/efficence_icon.png' %}"
                          alt="...">
                 </a>
 
-                <h3 class="media-heading">Poderoso, también significa eficiente</h3>
-                Construido con una arquitectura de 64-bits, el nuevo chip A8 otorga mayor poer, incluso teniendo una
-                pantalla más grande y podeorsa. El Coprocesador  motion M8 hace más eficientes los sensores y el nuevo
-                barometro. Y por último, la batería más larga del mundo.
+                <h3 class="media-heading"><label class="pull-left">Poderoso, también significa eficiente
+                    Construido con una arquitectura de 64-bits, el nuevo chip A8 otorga mayor poer, incluso teniendo una
+                    pantalla más grande y podeorsa. El Coprocesador motion M8 hace más eficientes los sensores y el
+                    nuevo
+                    barometro. Y por último, la batería más larga del mundo.
+                </label> <input class="clickedit" type="text"/></h3>
+
+                <div class="clearfix"></div>
             </div>
             <div class="class=col-xs-12 col-sm-4 media-body">
                 <a href="#">
-                    <img class="media-object benefit_logo" src="{% static 'theme_pages_files/theme_page_2/img/camera_benefit.png' %}"
+                    <img class="media-object benefit_logo"
+                         src="{% static 'theme_pages_files/theme_page_2/img/camera_benefit.png' %}"
                          alt="...">
                 </a>
 
-                <h3 class="media-heading">La cámara que cambio las fotos, ahora cambia el video</h3>
-                La mayoría de las personas toman más fotos con un Iphone que con cualquier otra cámara. El iSight
-                viene con un sensor de foco en pixel y nueva funciones de video como grabar en 1080p, slo-mo en 24fps
-                y el time-lapse para video.
+                <h3 class="media-heading"><label class="pull-left">La cámara que cambio las fotos, ahora cambia el video
+
+                    La mayoría de las personas toman más fotos con un Iphone que con cualquier otra cámara. El iSight
+                    viene con un sensor de foco en pixel y nueva funciones de video como grabar en 1080p, slo-mo en
+                    24fps
+                    y el time-lapse para video.
+                </label> <input class="clickedit" type="text"/></h3>
+
+                <div class="clearfix"></div>
             </div>
 
-            <!--
-            <div class="col-xs-12 col-sm-3 media-body">
-                <a href="#">
-                    <img class="media-object" src="{% static 'theme_pages_files/theme_page_2/img/feature2.gif' %}"
-                         alt="...">
-                </a>
+            <div class="col-xs-12" id="testimonios">
+                <div class="col-sm-6 col-md-4 item">
+                    <div class="thumbnail">
+                        <img src="{% static 'theme_pages_files/theme_page_2/img/customer-img-1.jpg' %}" alt="..."
+                             style="border-radius:30px;">
 
-                <h3 class="media-heading">Feature 2</h3>
-                Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas
-                del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio 1Caracterisitas del beneficio
-                1Caracterisitas del beneficio 1
-            </div>
-        </div>-->
+                        <div class="caption text-left">
+                            <h3><label class="">Román Riquelme
+                            </label> <input class="clickedit" type="text"/>
 
-        <div class="col-xs-12" id="testimonios">
-            <div class="col-sm-6 col-md-4 item">
-                <div class="thumbnail">
-                    <img src="{% static 'theme_pages_files/theme_page_2/img/customer-img-1.jpg' %}" alt="..."
-                         style="border-radius:30px;">
+                                <div class="clearfix"></div>
+                            </h3>
 
-                    <div class="caption text-left">
-                        <h3>Fulano</h3>
+                            <p><label class="pull-left">El Iphone 5S sin duda revolucionó la forma como yo trabajaba. No
+                                puedo esperar lo que será el
+                                Iphone 6
+                            </label> <input class="clickedit" type="text"/>
 
-                        <p>El Iphone 5S sin duda revoluciono la forma como yo trabajaba. No puedo esperar lo que será el}
-                        Iphone 6</p>
+                            <div class="clearfix"></div>
+                            </p>
 
-                        <div class="text-right work">
-                            <a href="#">Developer, GS</a>
+                            <div class="text-right work">
+                                <a href="#">Developer, GS</a>
+                            </div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 item">
-                <div class="thumbnail">
-                    <img src="{% static 'theme_pages_files/theme_page_2/img/customer-img-2.jpg' %}" alt="..."
-                         style="border-radius:30px;">
+                <div class="col-sm-6 col-md-4 item">
+                    <div class="thumbnail">
+                        <img src="{% static 'theme_pages_files/theme_page_2/img/customer-img-2.jpg' %}" alt="..."
+                             style="border-radius:30px;">
 
-                    <div class="caption text-left">
-                        <h3>Lego</h3>
+                        <div class="caption text-left">
+                            <h3><label class="">Roberto Gomez Bolaños
+                            </label> <input class="clickedit" type="text"/>
 
-                        <p>Con el 5S mi negocio de fotografias creció rápidamente. Según las caracterísitcas del 6, sin
-                        duda que explotará aun más.</p>
+                                <div class="clearfix"></div>
+                            </h3>
 
-                        <div class="text-right work">
-                            <a href="#">Fotografo</a>
+                            <p><label class="pull-left">Con el 5S mi negocio de fotografias creció rápidamente. Según
+                                las caracterísitcas del 6, sin
+                                duda que explotará aun más.
+                            </label> <input class="clickedit" type="text"/>
+
+                            <div class="clearfix"></div>
+                            </p>
+
+                            <div class="text-right work">
+                                <a href="#">Fotografo</a>
+                            </div>
+
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -165,30 +202,22 @@
     <div class="jumbotron">
         <div class="container">
             <div class="jumbotron">
-                <h1>¿QUE ESTAS ESPERANDO?</h1>
+                <h1><label class="pull-left">¿QUÉ ESTÁS ESPERANDO?</label> <input class="clickedit" type="text"/>
 
-                <p class="lead">Reserva YA tú Iphone 6 y únete a nuestra lista de espera. Reservándolo ahora, te llevarás
-                enormes descuentos y beneficios.</p>
+                    <div class="clearfix"></div>
+                </h1>
+
+                <p class="lead"><label class="pull-left">Reserva YA tú Iphone 6 y únete a nuestra lista de espera.
+                    Reservándolo ahora, te llevarás
+                    enormes descuentos y beneficios.</label> <input class="clickedit" type="text"/>
+
+                <div class="clearfix"></div>
+                </p>
 
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Reservalo ahora</a></p>
             </div>
         </div>
     </div>
-
-    <footer class="content-info navbar-bottom" role="contentinfo">
-        <div class="container">
-            <div class="col-xs-6 langCountry">
-                <div class="lang">
-                    <a href="#esp">ESP</a> / <a href="#eng">ENG</a>
-                </div>
-            </div>
-            <div class="col-xs-6 copyright">
-                <div>
-                    Black River Caviar © 2013 | Montevideo, Uruguay
-                </div>
-            </div>
-        </div>
-    </footer>
 
     {% block javascript %}
 
@@ -198,6 +227,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script src="{% static 'theme_pages_files/theme_page_2/js/scripts-landings-min.js' %}"></script>
+        <script src="{% static 'global_files/js/editable-page.js' %}" type="text/javascript"></script>
 
     {% endblock javascript %}
 
