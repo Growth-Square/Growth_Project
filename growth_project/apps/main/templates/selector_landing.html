@@ -18,7 +18,6 @@
 
     <div id="page-wrapper">
 
-
         <div class="container">
 
             <div class="row">
@@ -33,64 +32,34 @@
                 <p><strong>{{ error_message }}</strong></p>
 
             {% else %}
-                <div class="row">
-                    <div class="col-lg-12">
 
-                        {% for one_template in templates %}
-                            <div class="col-md-6 portfolio-item">
-                                <a href="{% url 'designer' one_template.templateFileName %} ">
-                                    <img class="img-responsive"
-                                         src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}"
-                                         style="width: 300px">
-                                </a>
+                {% for one_template in templates %}
 
-                                <h3>
-                                    <a href="#">{{ one_template.templateName }}</a>
-                                </h3>
+                    {% if forloop.counter0|divisibleby:2 %}
+                        <div class="row"> {% endif %}
 
-                                <p>{{ one_template.templateDescription }}</p>
-                            </div>
-                        {% endfor %}
+                <div class="col-lg-12" style="width: 50%">
 
+                    <div class="col-md-6 portfolio-item" style="width: 90%">
+                        <a href="{% url 'designer' one_template.templateFileName %} ">
+                            <img class="img-responsive"
+                                 src="{% static 'templates_files/' %}{{ one_template.previewImagePath }}">
+                        </a>
+
+                        <h3>
+                            <a href="{% url 'designer' one_template.templateFileName %}">{{ one_template.templateName }}</a>
+                        </h3>
+
+                        <p>{{ one_template.templateDescription }}</p>
                     </div>
+
                 </div>
+
+                {% if forloop.counter|divisibleby:2 %} </div> {% endif %}
+
+                {% endfor %}
 
             {% endif %}
-
-            <div class="row">
-                <div class="col-md-6 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                    </a>
-
-                    <h3>
-                        <a href="#">Normal</a>
-                    </h3>
-
-                    <p>Valida y haz conocer tu idea con un sencillo diseno realizado. Invierte en Adwords para realizar
-                        esta
-                        tarea de forma mas sencilla.</p>
-                </div>
-                <div class="col-md-6 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                    </a>
-
-                    <h3>
-                        <a href="#">From</a>
-                    </h3>
-
-                    <p>Se mas directo y muestra un form en tu inicio para obtener mas suscriptores.</p>
-                </div>
-            </div>
-
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; Your Website 2014</p>
-                    </div>
-                </div>
-            </footer>
 
         </div>
 
