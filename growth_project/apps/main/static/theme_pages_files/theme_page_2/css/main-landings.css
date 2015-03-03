@@ -5420,12 +5420,13 @@ main .preview {
   #form .form-inline {
     text-align: center; }
     #form .form-inline .form-group .form-control {
-      width: 260px;
-      height: 43px; }
+      width: 337px;
+      height: 53px;
+        font-size: 23px;}
     #form .form-inline .success {
       background-color: #5cb85c;
       color: white;
-      font-size: 22px;
+      font-size: 35px;
       margin-left: 30px; }
 
 #testimonios {
@@ -5453,3 +5454,9 @@ main .preview {
     padding: 1.5em 0; }
   #feature .media-heading {
     padding: .5em 0; }
+
+.testimonial_image{
+    border-radius: 30px;
+    width: 110px;
+    margin-top: -58px;
+  }
