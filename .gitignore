@@ -45,6 +45,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 git rm -f .idea/workspace.xml
-.idea/workspace.xml
+.idea/*
 growth_project/.idea/*
 growth_project/apps/main/.idea/*
