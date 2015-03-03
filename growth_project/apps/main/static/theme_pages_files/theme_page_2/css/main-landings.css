@@ -2786,7 +2786,7 @@ select[multiple].input-lg,
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -5441,7 +5441,9 @@ main .preview {
     border-radius: 100%; }
   #testimonios p {
     height: 57px;
-    overflow: hidden; }
+    overflow: hidden;
+    font-style: italic;
+    font-size: 16px;}
   #testimonios .work {
     font-style: italic; }
 
