@@ -1043,7 +1043,7 @@ p {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.4; }
+  line-height: 23px; }
   @media (min-width: 768px) {
     .lead {
       font-size: 21px; } }
@@ -2799,7 +2799,12 @@ select[multiple].input-lg,
 
 .btn-block {
   display: block;
-  width: 100%; }
+  width: 100%;
+    width: 193px;
+    height: 56px;
+    margin-left: 336px;
+    margin-top: 40px;
+    font-size: 22px;}
 
 .btn-block + .btn-block {
   margin-top: 5px; }
@@ -5423,3 +5428,9 @@ main .preview {
     padding: 1.5em 0; }
   #feature .media-heading {
     padding: .5em 0; }
+
+
+
+#copy{
+    margin-top: 119px;
+}
