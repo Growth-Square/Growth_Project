@@ -32,6 +32,33 @@
 
         <div class="container">
 
+            <div class="col-sx-12 masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Logo</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="#">Growth Square</a></li>
+                            <li><a href="#"><img class="social-network" href="#"
+                                                 src="{% static 'landing_mvp_files/img/facebook_logo.png' %}"/></a></li>
+                            <li><a href="#"><img class="social-network" href="#"
+                                                 src="{% static 'landing_mvp_files/img/twitter_logo.png' %}"/></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 inner cover">
+                <h1 class="cover-heading">Crea tu sitio web en 5 minutos.</h1>
+
+                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download,
+                    edit the text, and add your own fullscreen background photo to make it your own.</p>
+
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-default">Learn more</a>
+                </p>
+            </div>
+
             <div class="col-xs-12 col-sm-6 form">
 
                 <ul class="tab-group">
@@ -108,25 +135,23 @@
                         </form>
                     </div>
                 </div>
-                <div class="social-icon-login">
 
-                    <a href="{% url 'social:begin' 'facebook' %}" type="button">
-                        <img src=" {% static 'global_files/img/Facebook.png' %}"/>
-                    </a>
+                <a href="{% url 'social:begin' 'facebook' %}" type="button">
+                    <img src=" {% static 'global_files/img/Facebook.png' %}"/>
+                </a>
 
-                    <a href="{% url 'social:begin' 'twitter' %}" type="button">
-                        <img src="{% static 'global_files/img/Twitter.png' %}"/>
-                    </a>
+                <a href="{% url 'social:begin' 'twitter' %}" type="button">
+                    <img src="{% static 'global_files/img/Twitter.png' %}"/>
+                </a>
 
-                    <a href="{% url 'social:begin' 'google-oauth2' %}" type="button">
-                        <img src="{% static 'global_files/img/Google.jpg' %}" style="width: 70px;"/>
-                    </a>
+                <a href="{% url 'social:begin' 'google-oauth2' %}" type="button">
+                    <img src="{% static 'global_files/img/Google.jpg' %}" style="width: 70px;"/>
+                </a>
 
-                    {% if form.errors %}
-                        <p class="error">Sorry, that's not a valid username or password</p>
-                    {% endif %}
+                {% if form.errors %}
+                    <p class="error">Sorry, that's not a valid username or password</p>
+                {% endif %}
 
-                </div>
             </div>
 
         </div>
