@@ -8,9 +8,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <link href="{% static 'selector_landing_files/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'selector_landing_files/css/2-col-portfolio.css' %}" rel="stylesheet">
     <link href="{% static 'global_files/css/sb-admin.css' %}" rel="stylesheet">
     <link href="{% static 'dashboard_files/font-awesome/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'selector_landing_files/css/custom-style.css' %}" rel="stylesheet">
 
 {% endblock css %}
 
@@ -36,7 +36,7 @@
                 {% for one_template in templates %}
 
                     {% if forloop.counter0|divisibleby:2 %}
-                        <div class="row"> {% endif %}
+                        <div class="row template-row"> {% endif %}
 
                 <div class="col-lg-12" style="width: 50%">
 
