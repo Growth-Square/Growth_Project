@@ -184,7 +184,8 @@
                             <div class="clearfix"></div>
                         </h3>
 
-                        <p><label class="label-normal">Avanzamos en materia de comunicación interna y aumentamos las ntegración de
+                        <p><label class="label-normal">Avanzamos en materia de comunicación interna y aumentamos las
+                            ntegración de
                             información. Cada
                             día nos sprende más de las cosas que podemos hacer con Google Apps.</label><input
                                 class="clickedit" type="text"/>
@@ -215,7 +216,8 @@
                             <div class="clearfix"></div>
                         </h3>
 
-                        <p><label class="label-normal">Google Aps tiene los recursos necesarios para facilitar un equipo de IT pequeño, como
+                        <p><label class="label-normal">Google Aps tiene los recursos necesarios para facilitar un equipo
+                            de IT pequeño, como
                             el
                             nuestro en hacer un óptimos trabajo.</label><input class="clickedit" type="text"/>
 
@@ -235,24 +237,33 @@
             </div>
         </div>
     </main>
-    <div class="jumbotron">
-        <div class="container">
-            <div class="jumbotron">
-                <h1><label>¿QUÉ ESTÁS ESPERANDO?</label><input class="clickedit" type="text"/>
+
+    {{ template_name }}
+    <form action="" method="post"> {% csrf_token %}
+        <div class="jumbotron">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1><label>¿QUÉ ESTÁS ESPERANDO?</label><input class="clickedit" type="text"/>
+
+                        <div class="clearfix"></div>
+                    </h1>
+
+                    <p class="lead"><label class="label-normal">¿Qué estás esperando? Prueba Google Apps gratis durante
+                        30 días y optimiza la
+                        comunicación interna de tu empresa.</label><input class="clickedit" type="text"/>
 
                     <div class="clearfix"></div>
-                </h1>
+                    </p>
 
-                <p class="lead"><label class="label-normal">¿Qué estás esperando? Prueba Google Apps gratis durante 30 días y optimiza la
-                    comunicación interna de tu empresa.</label><input class="clickedit" type="text"/>
+                    <p>
+                        <button type="submit" class="btn btn-primary btn-lg" href="{% url 'save_template' %} " role="button">Comienza YA!
+                        </button>
+                    </p>
 
-                <div class="clearfix"></div>
-                </p>
-
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Comienza YA!</a></p>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 
     {% block javascript %}
 

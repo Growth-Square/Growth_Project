@@ -45,5 +45,27 @@ conn = mysql.connector.connect(user='root', database='growthdb')
 def designer(request, template_name):
     # tag = Tag.objects.get(name=unslug)
     # return render_to_response('landing.html', args=(templateFileName,))
-    return render_to_response('theme_pages/' + template_name + '.html', {'user': request.user})
+    return render_to_response('theme_pages/' + template_name + '.html',
+                              {'user': request.user, 'template_name': template_name})
 
+
+class save_template1(generic.DetailView):
+    model = Template
+    template_name = 'dashboard.html'
+
+
+def save_template(request, template_name):
+    t = get_object_or_404(Template, pk=template_name)
+    try:
+        template = t.choice_set.get(pk=request.POST['choice'])
+        lp = LandingPage()
+        lp.template_id = template.id
+        lp.userEmail = 'prueba'
+
+    except (KeyError, Template.DoesNotExist):
+        return render(request, 'theme_pages/' + template_name + '.html', {'user': request.user,
+                                                                          'error_message': "El template no existe en la base.",
+        })
+    else:
+        lp.save()
+    return HttpResponseRedirect('dashboard.html', {'user': request.user})

@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from growth_project.apps.main import views as viewsGrowth
+from growth_project.apps.main import views as views_growth
 
 admin.autodiscover()
 
@@ -21,12 +21,15 @@ urlpatterns = patterns('',
                        url(r'^accounts/new/$', 'growth_project.views.new'),
 
                        # Main functions
-                       url(r'^dashboard/$', viewsGrowth.dashboard, name='dashboard'),
-                       url(r'^dashboard/selector/$', viewsGrowth.selector, name='selector'),
-                       # url(r'^dashboard/designer/$', viewsGrowth.designer, name='designer'),
-                       # url(r'^dashboard/designer/(\d{4})/$', viewsGrowth.designer, name='designer'),
-                       url(r'^designer/(?P<template_name>\w+)/$', viewsGrowth.designer, name='designer'),
+                       url(r'^dashboard/$', views_growth.dashboard, name='dashboard'),
+                       url(r'^dashboard/selector/$', views_growth.selector, name='selector'),
+                       # url(r'^dashboard/designer/$', views_growth.designer, name='designer'),
+                       # url(r'^dashboard/designer/(\d{4})/$', views_growth.designer, name='designer'),
+                       url(r'^designer/(?P<template_name>\w+)/$', views_growth.designer, name='designer'),
                        # (?P<name>\w+)/
+                       url(r'^designer/selector/$', views_growth.save_template1.as_view,
+                           name='save_template'),
+
 
                        # Reset password urls
                        url(r'^reset/password_reset/$', 'django.contrib.auth.views.password_reset',
