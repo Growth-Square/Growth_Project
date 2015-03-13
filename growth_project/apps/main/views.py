@@ -42,30 +42,31 @@ conn = mysql.connector.connect(user='root', database='growthdb')
     """
 
 
-def designer(request, template_name):
+# def designer(request, template_name):
+def designer(request, template_id):
     # tag = Tag.objects.get(name=unslug)
     # return render_to_response('landing.html', args=(templateFileName,))
-    return render_to_response('theme_pages/' + template_name + '.html',
-                              {'user': request.user, 'template_name': template_name})
-
-
-class save_template1(generic.DetailView):
-    model = Template
-    template_name = 'dashboard.html'
+    return render_to_response('theme_pages/landing_' + template_id + '.html',
+                              {'user': request.user, 'template_id': template_id})
+    # {'user': request.user, 'template_id': template_id,'template_name': template_name})
 
 
 def save_template(request, template_name):
-    t = get_object_or_404(Template, pk=template_name)
-    try:
-        template = t.choice_set.get(pk=request.POST['choice'])
-        lp = LandingPage()
-        lp.template_id = template.id
-        lp.userEmail = 'prueba'
+    if request.method == 'POST':
+        template_id = request.POST.get('template_id', '')
 
-    except (KeyError, Template.DoesNotExist):
-        return render(request, 'theme_pages/' + template_name + '.html', {'user': request.user,
-                                                                          'error_message': "El template no existe en la base.",
-        })
-    else:
-        lp.save()
-    return HttpResponseRedirect('dashboard.html', {'user': request.user})
+        t = get_object_or_404(Template, pk=template_id)
+        try:
+            lp = LandingPage()
+            lp.template_id = t.id
+            lp.userEmail = 'prueba'
+
+            LandingPage.objects.create(template_id=t.id, userEmail='asdsad')
+
+        except (KeyError, Template.DoesNotExist):
+            # return render(request, 'theme_pages/' + template_name + '.html', {'user': request.user,
+            # 'error_message': "El template no existe en la base.",
+            return render_to_response('dashboard.html', {'user': request.user})
+
+        # })
+    return render_to_response('dashboard.html', {'user': request.user})

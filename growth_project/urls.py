@@ -25,10 +25,12 @@ urlpatterns = patterns('',
                        url(r'^dashboard/selector/$', views_growth.selector, name='selector'),
                        # url(r'^dashboard/designer/$', views_growth.designer, name='designer'),
                        # url(r'^dashboard/designer/(\d{4})/$', views_growth.designer, name='designer'),
-                       url(r'^designer/(?P<template_name>\w+)/$', views_growth.designer, name='designer'),
+
+                       #url(r'^designer/(?P<template_name>\w+)/$', views_growth.designer, name='designer'),
+                       url(r'^designer/landing_(\d{1})/$', views_growth.designer, name='designer'),
                        # (?P<name>\w+)/
-                       url(r'^designer/selector/$', views_growth.save_template1.as_view,
-                           name='save_template'),
+
+                       url(r'^dashboard/$', views_growth.save_template, name='save_template'),
 
 
                        # Reset password urls

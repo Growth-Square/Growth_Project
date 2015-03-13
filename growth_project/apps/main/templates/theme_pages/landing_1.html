@@ -239,7 +239,8 @@
     </main>
 
     {{ template_name }}
-    <form action="" method="post"> {% csrf_token %}
+    <form action="{% url 'save_template' %}" method="post"> {% csrf_token %}
+        <input type="hidden" name="template_id" value="{{ template_id }}">
         <div class="jumbotron">
             <div class="container">
                 <div class="jumbotron">
@@ -256,7 +257,7 @@
                     </p>
 
                     <p>
-                        <button type="submit" class="btn btn-primary btn-lg" href="{% url 'save_template' %} " role="button">Comienza YA!
+                        <button type="submit" class="btn btn-primary btn-lg" href="" role="button">Comienza YA!
                         </button>
                     </p>
 
